@@ -37,17 +37,7 @@ services:
 
     networks:
       - springboot-network
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    container_name: nginx-server
-    ports:
-      - "8085:80"
-    depends_on:
-      - springboot-app
-    networks:
-      - springboot-network
+  
 volumes:
   mysql-data:
 
